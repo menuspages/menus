@@ -1,0 +1,574 @@
+@font-face {
+    font-family: <?php echo $restaurant->font_style=='none' ? '': $restaurant->font_style;
+    ?>;
+    src: url("{{asset('fonts/02f502e5eefeb353e5f83fc5045348dc.eot')}}");
+    src: url("{{asset('fonts/02f502e5eefeb353e5f83fc5045348dc.eot?#iefix')}}") format("embedded-opentype"),
+    url("{{asset('fonts/02f502e5eefeb353e5f83fc5045348dc.woff2')}}") format("woff2"),
+    url("//db.onlinewebfonts.com/t/02f502e5eefeb353e5f83fc5045348dc.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/02f502e5eefeb353e5f83fc5045348dc.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/02f502e5eefeb353e5f83fc5045348dc.svg#GE SS Two Light") format("svg");
+}
+
+.items-count {
+    position: absolute;
+    padding: 2px;
+    color: black;
+    background-color: white;
+    right: 7%;
+    top: 1%;
+}
+
+.box-categories {
+    padding: 10px;
+    border: none;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--mainColor);
+}
+
+.rating {
+    position: absolute;
+    bottom: 4%;
+    left: 3%;
+    z-index: 10000;
+}
+
+.icon-new {
+    border: 0px solid white;
+    position: absolute;
+    border-radius: 100px;
+    box-shadow: white 0px 0px 3px 1px;
+    bottom: 15%;
+    right: 5%;
+}
+
+#app_main {
+    height: 100vh;
+    overflow: auto;
+}
+
+.box-categories a {
+    white-space: nowrap;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+
+body {
+    background: #f5f5e9;
+    font-size: 14px;
+}
+
+.item {
+    border: none;
+    border-radius: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .back-images {
+        height: 300px;
+    }
+    .items-container,
+    .container-fluid {
+        padding: 0px !important;
+        margin-top: 3px;
+    }
+    .disabled {
+        margin: 0px;
+    }
+    .slide {
+        height: 300px;
+    }
+    .titles {
+        z-index: 100 !important;
+        bottom: -2%;
+        left: 2%;
+        right: 2%;
+    }
+}
+
+.back-images {
+    position: relative;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.icon-new {
+    border: 0px solid white;
+    position: absolute;
+    border-radius: 100px;
+    box-shadow: white 0px 0px 3px 1px;
+    bottom: 8%;
+    right: 15%;
+}
+
+@media only screen and (min-width: 600px) {
+    .back-images {
+        height: 680px;
+    }
+    .product-title {
+        word-break: keep-all;
+        font-size: 18px;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .titles {
+        z-index: 100 !important;
+        left: 30% !important;
+        right: 30% !important;
+        bottom: 3%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .slide {
+        height: 600px;
+    }
+    .space {
+        height: 300px;
+    }
+    .items-container {
+        width: 400px;
+    }
+}
+
+.item-action-button:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+h2.category-header {
+    background: none;
+}
+
+.category-selected {
+    color: white !important;
+}
+
+.category-unselected {
+    color: black !important;
+    background-color: transparent !important;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 80%;
+    right: -34%;
+}
+
+.language {
+    position: absolute;
+    border: none;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#order-section button {
+    justify-content: center;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    color: black;
+    margin: 0px;
+    padding: 0px
+}
+
+#app {
+    font-family: <?php echo $restaurant->font_style=='none' ? '': $restaurant->font_style;
+    ?>;
+}
+
+#order-section {
+    position: fixed;
+}
+
+.frame-parent {
+    height: 300px;
+    position: relative;
+}
+
+.items-container {
+    position: relative;
+    padding: 0px;
+    border-radius: 20px !important;
+}
+
+.frame {
+    position: absolute;
+    /* height: 280
+px
+; */
+    /* width: 100%; */
+    bottom: 5%;
+    top: 5% !important;
+    z-index: 10;
+    right: 5%;
+    left: 5%;
+}
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.margin-10 {
+    margin: 10px
+}
+
+.logo img {
+    z-index: 1;
+    border: solid 2px #383838;
+    border-radius: 100px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 6px 15px;
+}
+
+.btn-shopping-cart {
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.lang-box {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#categories::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.category {
+    margin: 0 0.3rem;
+    padding: 10px;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+#categories {
+    padding: 10px;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+body {
+    background: #F4F4F4;
+    font-size: 14px;
+}
+
+#restaurant-header {
+    display: block;
+    position: relative;
+    height: 60vh;
+    max-height: 300px;
+}
+
+.info-wrapper {
+    margin-top: 1rem;
+}
+
+.restaurant-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.restaurant-logo {
+    overflow: hidden;
+    background: white;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.10);
+}
+
+.restaurant-logo img {
+    width: 100px;
+    height: 100px;
+    padding: 0.2rem;
+}
+
+#items-container {
+    padding-top: 2rem;
+}
+
+.item .calories {
+    color: #179901;
+    font-size: 0.7rem;
+}
+
+.price-tag {
+    font-weight: bolder;
+}
+
+.working-hours {
+    display: inline-block;
+    margin: 1rem;
+    padding: 4px 15px;
+    font-size: 13px;
+    background: #fff;
+    color: #717171;
+    border-radius: 120px;
+    text-align: center;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.10);
+}
+
+.product-description {
+    word-break: break-all;
+    display: normal;
+    font-size: 15px;
+    color: gray;
+    max-width: 200px
+}
+
+.slide {
+    width: 100%;
+    font-size: 25px;
+}
+
+.items-container {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px !important
+}
+
+.item-image {
+    border-radius: 40px 40px 0px 0px !important;
+    background-color: #C0D1A0;
+    padding: 0px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+h2.category-header {
+    background: linear-gradient(to left, #ffd84f, #fff 80%);
+    margin-bottom: 1rem;
+}
+
+.product-title {
+    width: 70%;
+    margin-right: 0px;
+    font-weight: bold;
+}
+
+.category-items-wrapper {
+    overflow-x: scroll !important;
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    position: relative;
+    border-radius: 40px;
+}
+
+.word-break {
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.item-wrapper {
+    min-width: 350px;
+    max-width: 350px;
+    position: relative;
+    background-color: white;
+    font-size: 18px;
+    margin-bottom: 20px !important;
+    margin-bottom: 30px;
+    border-radius: 40px;
+}
+
+.item-image-box {
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center
+}
+
+.item.expanded {
+    overflow-y: scroll;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.item-wrapper.expanded .item-action-button {
+    position: inherit !important;
+}
+
+.item.added {
+    background: linear-gradient(130deg, #ffd84f, #fff);
+}
+
+.item.unavailable:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: #00000082;
+}
+
+.add-to-cart-button {
+    background: var(--mainColor);
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+#social-part a img {
+    vertical-align: middle;
+    padding: 0.5rem;
+    background: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 2.8rem;
+}
+
+span.extensable {
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+#categories {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 1rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.working-hours {
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 0 5px 0
+}
+
+#categories::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+#place-order-modal .flatted-well,
+#order-section .flatted-well {
+    display: inline-block;
+    margin: 1rem;
+    padding: 4px 15px;
+    font-size: 13px;
+    background: var(--mainColor);
+    color: #fff;
+    border-radius: 120px;
+    text-align: center;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.10);
+}
+
+#order-section .flatted-well {
+    border-radius: 5px;
+    background: white;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+span.items-count {
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+#categories .flatted-well.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#order-section {
+    position: absolute;
+    height: 50px;
+    top: 1%;
+    left: 3%;
+}
+
+.label-allergens {
+    font-size: 20px !important;
+    display: block;
+}
+
+.nb-no {
+    border: none;
+    outline: none;
+}
+
+.nb-no:focus {
+    border: none;
+    outline: none;
+}
+
+.item-action-button {
+    border-radius: 40px;
+    border: solid 1px black !important;
+    color: black;
+    background-color: white
+}
+
+.place-order {
+    margin-left: 60px;
+    margin-right: 60px;
+    border: none;
+    outline: none;
+}
+
+#cart {
+    position: relative;
+}
+
+#cart .badge {
+    position: absolute;
+    top: -5px;
+    left: -15px;
+}
+
+.notification {
+    position: fixed;
+    bottom: 10rem;
+    right: -5px;
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.1s ease-in-out;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+@media only screen and (max-width: 700px) {
+    #restaurant-header {
+        max-height: 18rem;
+    }
+}
