@@ -355,12 +355,13 @@ body {
 }
 
 .item-image {
-    border-radius: 40px 40px 0px 0px !important;
+    /* border-radius: 40px 40px 0px 0px !important; */
     background-color: #C0D1A0;
     padding: 0px;
-    width: 300px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 40px;
 }
 
 h2.category-header {
@@ -391,6 +392,7 @@ h2.category-header {
 }
 
 .item-wrapper {
+    overflow: hidden;
     min-width: 350px;
     max-width: 350px;
     position: relative;
@@ -402,7 +404,6 @@ h2.category-header {
 }
 
 .item-image-box {
-    padding: 10px;
     border-radius: 40px;
     display: flex;
     justify-content: center
