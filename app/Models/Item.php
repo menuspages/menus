@@ -27,14 +27,7 @@ class Item extends Model
         'sub_details_new' => 'json',        
         
     ];
-    public function allergensExists()
-{
-    if($this->allergens != null)
-    {
-        return true;
-    }
-    return false;
-}
+
     public function category()
     {
         return $this->belongsTo(Category::class);

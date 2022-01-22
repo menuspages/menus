@@ -12,9 +12,15 @@ class Order extends Model
     use HasFactory;
 
     protected $fillable = ['customer_name', 'customer_address', 'customer_phone', 'customer_notes', 'restaurant_id', 'total', 'admin_notes', 'pickup_type' , 'location',
-    'transfer_type'
-];
-
+    'transfer_type',
+    'cart_options->date',
+    'cart_options->note',
+    'cart_options->allergens',
+    
+    ];
+    protected $casts = [
+        'cart_options' => 'json',        
+    ];
     protected $dates = ['created_at', 'updated_at', 'noticed_at', 'finished_at'];
 
     public function items()

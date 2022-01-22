@@ -267,8 +267,7 @@ class RestaurantManagerController extends Controller
 
     private function constructRestaurantFieldsArray($imagePaths,ManagerUpdateRestaurantRequest $request, $restaurant, $logoPath = null)
     {
-        $back_theme_ele = array();
-        
+            $back_theme_ele = array();
             if($request->back_theme_select == '0')
             {
                 $back_theme_ele = array(
@@ -297,6 +296,7 @@ class RestaurantManagerController extends Controller
         
         $fields = [
             'name' => ucwords($request->input('name')),
+            'cart_options' => json_encode($request->input('cartOptinos')),
             'user_email' => $request->input('user_email'),
             'notes1' => $request->input('notes1'),
             'notes2' => $request->input('notes2'),

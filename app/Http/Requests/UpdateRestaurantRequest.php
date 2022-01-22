@@ -41,6 +41,7 @@ class UpdateRestaurantRequest extends FormRequest
             'logo' => ValidationStrings::IMAGE_VALIDATION,
             'enable_component' => 'required|int',
             'is_active' => 'required|boolean',
+            'cartOptinos' => 'nullable',
             'available_themes' => 'required|array|min:1|in:' . implode(',', Themes::AVAILABLE_THEMES)
         ];
     }

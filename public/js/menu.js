@@ -393,12 +393,16 @@ let app = new Vue({
                 phone: this.phone_code + this.phone,
                 address: this.address,
                 transfer_type: this.payment_type,
+                date: getCartOptinos('date'),
+                allergens: getCartOptinos('allergens'),
+                note: getCartOptinos('note'),
                 transfer_type_recp: this.transfer_type_recp,
                 notes: this.notes,
                 pickup_type: this.pickup_type,
                 location: this.location
             }
 
+            console.log(body)
 
             if (Number(this.pickup_type) === PICKUP_TYPES.TAKE_AWAY) {
                 delete body['address'];

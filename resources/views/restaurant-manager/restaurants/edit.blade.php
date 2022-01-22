@@ -95,6 +95,27 @@
             </div>
 
             <div class="form-group">
+                    <div>
+                         <h6>
+                                 {{\App\Constants\Translation::getTranslationByWord('arb' , 'cart_options')}}
+                         </h6>
+                    </div>
+                    <div >
+                        <input name="cartOptinos[]" value="date" type="checkbox"  >
+                        <label for="">{{\App\Constants\Translation::getTranslationByWord('arb' , 'date')}} </label>
+                    </div>
+                    <div>
+                        <input name="cartOptinos[]" value="note" type="checkbox"  >
+                        <label for="">{{\App\Constants\Translation::getTranslationByWord('arb' , 'note')}} </label> 
+                    </div>
+                    <div>
+                    <input name="cartOptinos[]" type="checkbox" value="allergens" >
+                        <label for="">{{\App\Constants\Translation::getTranslationByWord('arb' , 'allergens')}} </label> 
+                    </div>
+                    
+            </div>
+
+            <div class="form-group">
                 <select id="phone_code" class="form-control" name="phone_code">
                     <option value="966" selected>
                         966

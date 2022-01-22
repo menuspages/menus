@@ -15,7 +15,12 @@ class Translation
           "contact_us" => "Conctact Us",
           "delete" => "Delete",
           "links" => "Links" ,
-          "add_feature" => "Add Feature"
+          "add_feature" => "Add Feature",
+          "date" => "Date",
+          "note" => "Note",
+          "allergens" => "Allergens",
+          "cart_options" => "Cart Options"
+          
           
       ),
       "arb" => array(
@@ -27,7 +32,12 @@ class Translation
           "delete" => "حذف",
           "add_feature" => "إضافة ميزة
           ",
-          "links" => "الروابط"
+          "date" => "تاريخ",
+          "note" => "ملحوظة ",
+          "allergens" => "مسببات الحساسية",
+          "links" => "الروابط",
+          "cart_options" => "خيارات عربة التسوق
+          "
           )
       );
   }  

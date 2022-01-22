@@ -287,9 +287,12 @@ class OrderController extends Controller
             'customer_name' => $request->input('name'),
             'customer_phone' => $request->input('phone'),
             'customer_notes' => $request->input('notes'),
-            'location' => $request->input('location'),
+            'location' => $request->input('location'), 
             'restaurant_id' => $request->get('restaurant')->id,
             'total' => $total,
+            'cart_options->date' => $request->get('date'),
+            'cart_options->note' => $request->get('note'),
+            'cart_options->allergens' => $request->get('allergens'),
         ]);
 
         $order->items()->attach($this->formatItemOrderArray($requestItems, $items));

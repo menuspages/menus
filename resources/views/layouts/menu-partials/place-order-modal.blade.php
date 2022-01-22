@@ -171,6 +171,27 @@ try {
                      </button>    
                 </div>    
                 </div> 
+                @if(!is_null($restaurant->cart_options))
+                <div class="px-2 py-2 border-radius-10 border my-4" >
+                   
+                            @foreach(json_decode($restaurant->cart_options) as $input)
+                                <div class="my-2" >
+                                    <label for="">
+                                    {{\App\Constants\Translation::getTranslationByWord('arb' , $input)}}
+                                    </label>
+                                    @if($input == "date")
+                                        <div class="d-flex" >
+                                            <input id="date"  type="date" class="form-control width-50" placeholder="اكتب {{$input}}"   name="date" >
+                                            <input id="time" type="time" class="form-control width-50" >    
+                                        </div>
+                                    @else 
+                                        <input id="{{$input}}"  type="{{$input}}" placeholder="اكتب {{$input}}" class="form-control"  name="{{$input}}" >
+                                    @endif
+                                </div>
+                            @endforeach    
+                   
+                </div>
+                @endif
             @if($restaurant->enable_component < 2)                       
             <div class="contianer-check-out" >
                 <div>
@@ -494,9 +515,16 @@ try {
 </div>
 
 <script>
-    function getItem()
+    function getCartOptinos(id)
     {
-        return "hi";
+        if(id == "date")
+        {
+            return $("#date").val()+" "+$("#time").val();
+        }
+        else 
+        {
+            return $("#"+id).val();
+        }
     }
     function openContainer(e , container )
     {
