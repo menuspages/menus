@@ -171,9 +171,9 @@ try {
                      </button>    
                 </div>    
                 </div> 
-                @if(!is_null($restaurant->cart_options))
+                @if(!is_null($restaurant->cart_options) && count(json_decode($restaurant->cart_options)) > 0 )
                 <div class="px-2 py-2 border-radius-10 border my-4" >
-                   
+
                             @foreach(json_decode($restaurant->cart_options) as $input)
                                 <div class="my-2" >
                                     <label for="">

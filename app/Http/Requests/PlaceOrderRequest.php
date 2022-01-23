@@ -48,6 +48,9 @@ class PlaceOrderRequest extends FormRequest
             'location' => 'nullable|string',
             'transfer_type' => 'nullable',
             'transfer_type_recp' => 'nullable',
+            'date' => 'nullable',
+            'note' => 'nullable',
+            'allergens' => 'nullable',
             'notes' => 'nullable|string|min:2',
             'pickup_type' => 'required|in:' . implode(',' , array_keys(Order::PICKUP_TYPES))
         ];

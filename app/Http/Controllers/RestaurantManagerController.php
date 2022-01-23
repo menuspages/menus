@@ -254,7 +254,7 @@ class RestaurantManagerController extends Controller
                     array_push($imagePaths , $path);
                 }
             }
-
+            
             $restaurant->update($this->constructRestaurantFieldsArray(count($imagePaths) > 0 ? $imagePaths : '',$request, $restaurant, isset($logoPath) ? $logoPath : null));
             session()->flash('success', 'تم تعديل المتجر بنجاح');
         } catch (\Exception $e) {
@@ -296,7 +296,7 @@ class RestaurantManagerController extends Controller
         
         $fields = [
             'name' => ucwords($request->input('name')),
-            'cart_options' => json_encode($request->input('cartOptinos')),
+            'cart_options' => json_encode($request->input('cartOptinos') == "" ? array() : $request->input('cartOptinos') ),
             'user_email' => $request->input('user_email'),
             'notes1' => $request->input('notes1'),
             'notes2' => $request->input('notes2'),

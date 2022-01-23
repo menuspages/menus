@@ -417,6 +417,10 @@ let app = new Vue({
             formData.append('transfer_type', body["transfer_type"])
             formData.append('transfer_type_recp', body["transfer_type_recp"])
             formData.append('notes', body["notes"])
+            formData.append('date', body["date"])
+            formData.append('note', body["note"])
+            formData.append('allergens', body["allergens"])
+            
             formData.append('pickup_type', body["pickup_type"])
             formData.append('location', body["location"])
             return formData;

@@ -251,7 +251,6 @@
                        <dt class="col-sm-5 mt-2">ملاحظات الادمن</dt> 
                         <dd class="col-sm-7 mt-2">{{$order->admin_notes}}</dd>
                     @endif
-                    {{json_encode($order->cart_options)}}
                     @if(!is_null($order->cart_options))
                        @foreach($order->cart_options as $index=>$item )
                         <dt class="col-sm-5 mt-2">{{$index}}</dt> 

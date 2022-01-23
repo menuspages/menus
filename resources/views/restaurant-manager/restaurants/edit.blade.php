@@ -101,15 +101,15 @@
                          </h6>
                     </div>
                     <div >
-                        <input name="cartOptinos[]" value="date" type="checkbox"  >
+                        <input name="cartOptinos[]" value="date" type="checkbox" {{ !is_null(json_decode($restaurant->cart_options)) ? in_array('date',json_decode($restaurant->cart_options))  == true ? 'checked' : '' : '' }} >
                         <label for="">{{\App\Constants\Translation::getTranslationByWord('arb' , 'date')}} </label>
                     </div>
                     <div>
-                        <input name="cartOptinos[]" value="note" type="checkbox"  >
+                        <input name="cartOptinos[]" value="note" type="checkbox" {{ !is_null(json_decode($restaurant->cart_options)) ? in_array('note',json_decode($restaurant->cart_options))  == true ? 'checked' : '' : '' }} >
                         <label for="">{{\App\Constants\Translation::getTranslationByWord('arb' , 'note')}} </label> 
                     </div>
                     <div>
-                    <input name="cartOptinos[]" type="checkbox" value="allergens" >
+                    <input name="cartOptinos[]" type="checkbox" value="allergens" {{ !is_null(json_decode($restaurant->cart_options)) ? in_array('allergens',json_decode($restaurant->cart_options))  == true ? 'checked' : '' : '' }} >
                         <label for="">{{\App\Constants\Translation::getTranslationByWord('arb' , 'allergens')}} </label> 
                     </div>
                     

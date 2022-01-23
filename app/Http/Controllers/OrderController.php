@@ -236,7 +236,7 @@ class OrderController extends Controller
     }
     public function placeOrder(PlaceOrderRequest $request)
     {
-        
+
         $requestItems =  json_decode($request->input('items'), true);
         foreach($requestItems as $cartItem)
         {
@@ -290,9 +290,9 @@ class OrderController extends Controller
             'location' => $request->input('location'), 
             'restaurant_id' => $request->get('restaurant')->id,
             'total' => $total,
-            'cart_options->date' => $request->get('date'),
-            'cart_options->note' => $request->get('note'),
-            'cart_options->allergens' => $request->get('allergens'),
+            'cart_options->date' => $request->input('date'),
+            'cart_options->note' => $request->input('note'),
+            'cart_options->allergens' => $request->input('allergens'),
         ]);
 
         $order->items()->attach($this->formatItemOrderArray($requestItems, $items));
